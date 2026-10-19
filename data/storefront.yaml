@@ -1,0 +1,25 @@
+# Storefront-wide configuration. Fictional storefront, example.test-style URLs.
+name: Harbor TV App Store
+source_locale: en-US
+# Locales the storefront UI chrome (navigation, buttons, checkout) is translated into.
+ui_locales:
+  [en-US, en-CA, fr-CA, es-MX, pt-BR, en-GB, fr-FR, de-DE, es-ES, it-IT,
+   nl-NL, tr-TR, ar-SA, en-IN, hi-IN, ja-JP, ko-KR, en-AU]
+# Legal links published per market. Each market pack lists which link types it requires.
+legal_links:
+  US: {terms: https://apps.example/us/terms, privacy: https://apps.example/us/privacy}
+  CA: {terms: https://apps.example/ca/terms, privacy: https://apps.example/ca/privacy}
+  MX: {terms: https://apps.example/mx/terminos, privacy: https://apps.example/mx/privacidad}
+  BR: {terms: https://apps.example/br/termos, privacy: https://apps.example/br/privacidade}
+  GB: {terms: https://apps.example/gb/terms, privacy: https://apps.example/gb/privacy}
+  FR: {terms: https://apps.example/fr/conditions, privacy: https://apps.example/fr/confidentialite, legal_notice: https://apps.example/fr/mentions-legales}
+  DE: {terms: https://apps.example/de/agb, privacy: https://apps.example/de/datenschutz}
+  ES: {terms: https://apps.example/es/terminos, privacy: https://apps.example/es/privacidad}
+  IT: {terms: https://apps.example/it/termini, privacy: https://apps.example/it/privacy}
+  NL: {terms: https://apps.example/nl/voorwaarden, privacy: https://apps.example/nl/privacy}
+  TR: {terms: https://apps.example/tr/kosullar, privacy: https://apps.example/tr/gizlilik}
+  SA: {terms: https://apps.example/sa/terms, privacy: https://apps.example/sa/privacy}
+  IN: {terms: https://apps.example/in/terms, privacy: https://apps.example/in/privacy}
+  JP: {terms: https://apps.example/jp/terms, privacy: https://apps.example/jp/privacy, commerce_disclosure: https://apps.example/jp/commerce}
+  KR: {terms: https://apps.example/kr/terms, privacy: https://apps.example/kr/privacy}
+  AU: {terms: https://apps.example/au/terms, privacy: https://apps.example/au/privacy}

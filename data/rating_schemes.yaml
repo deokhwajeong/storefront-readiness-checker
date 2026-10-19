@@ -1,0 +1,20 @@
+# Age-rating schemes referenced by market rule packs.
+# These are generic, illustrative ladders, ordered from least to most restrictive.
+# They are modeled on the shape of real-world schemes but are not copies of any
+# official scheme and must not be used as a statement of legal requirements.
+schemes:
+  letter-4:
+    name: Letter bands (illustrative)
+    values: [ALL, "10+", TEEN, MATURE]
+  numeric-5:
+    name: Numeric age bands, five steps (illustrative)
+    values: ["3", "7", "12", "16", "18"]
+  numeric-6:
+    name: Numeric age bands, six steps (illustrative)
+    values: [L, "10", "12", "14", "16", "18"]
+  numeric-4k:
+    name: Numeric age bands, four steps (illustrative)
+    values: [ALL, "12", "15", "19"]
+  numeric-au:
+    name: Classification bands (illustrative)
+    values: [G, PG, M, MA15, R18]

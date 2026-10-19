@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ t.account }} | {{ t.store_name }}</title>
+</head>
+<body>
+  <!-- This template is intended to pass every automated check. -->
+  <main>
+    <h1>{{ t.account }}</h1>
+    <form action="/account" method="post">
+      <h2>{{ t.profile }}</h2>
+      <label for="display-name">{{ t.display_name }}</label>
+      <input id="display-name" name="display_name" type="text" autocomplete="nickname">
+      <label>{{ t.country }}
+        <select name="country"><option>{{ t.country_default }}</option></select>
+      </label>
+      <h2>{{ t.parental_controls }}</h2>
+      <input type="checkbox" id="pin-purchases" name="pin_purchases">
+      <label for="pin-purchases">{{ t.require_pin }}</label>
+      <input type="text" name="pin" inputmode="numeric" aria-label="{{ t.pin_label }}">
+      <button type="submit">{{ t.save }}</button>
+    </form>
+    <p><a href="{{ legal.privacy }}">{{ t.privacy_policy }}</a></p>
+  </main>
+</body>
+</html>

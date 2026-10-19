@@ -1,0 +1,33 @@
+# Market rule pack: South Korea.
+# Illustrative rules for a fictional storefront. Not legal advice and not a
+# statement of any jurisdiction's actual requirements.
+market: KR
+name: South Korea
+notes: "Lengths are measured in display width: full-width characters count as two."
+locales:
+  required: [ko-KR]
+  fallback: {}
+translation:
+  required_fields: [title, description, screenshot_alt]
+  min_completeness: 0.98
+string_limits:
+  title: {max: 30, unit: display_width, severity: blocker}
+  description: {max: 240, unit: display_width, severity: warning}
+age_rating:
+  scheme: numeric-4k
+pricing:
+  currency: "KRW"
+  symbol: "₩"
+  position: "prefix"
+  space: false
+  decimal: "."
+  group: ","
+  decimals: 0
+legal:
+  required_links: [terms, privacy]
+content:
+  simulated_gambling: {action: block}
+  user_generated_content: {action: review}
+accessibility:
+  required: false
+  standard: "WCAG 2.0 Level AA"

@@ -1,0 +1,32 @@
+# Market rule pack: Japan.
+# Illustrative rules for a fictional storefront. Not legal advice and not a
+# statement of any jurisdiction's actual requirements.
+market: JP
+name: Japan
+notes: "Lengths are measured in display width: full-width characters count as two."
+locales:
+  required: [ja-JP]
+  fallback: {}
+translation:
+  required_fields: [title, description, screenshot_alt]
+  min_completeness: 0.98
+string_limits:
+  title: {max: 30, unit: display_width, severity: blocker}
+  description: {max: 240, unit: display_width, severity: warning}
+age_rating:
+  scheme: numeric-5
+pricing:
+  currency: "JPY"
+  symbol: "¥"
+  position: "prefix"
+  space: false
+  decimal: "."
+  group: ","
+  decimals: 0
+legal:
+  required_links: [terms, privacy, commerce_disclosure]
+content:
+  loot_boxes: {action: review}
+accessibility:
+  required: false
+  standard: "WCAG 2.0 Level AA"

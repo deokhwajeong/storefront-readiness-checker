@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ app.title }} | {{ t.store_name }}</title>
+</head>
+<body>
+  <main>
+    <h1>{{ app.title }}</h1>
+    <p class="partner">{{ app.partner }}</p>
+    <!-- Seeded issue: jumps from h1 to h3 (1.3.1, advisory). -->
+    <h3>{{ t.screenshots }}</h3>
+    <div class="shots">
+      <img src="{{ app.shot_1 }}" alt="{{ app.shot_1_alt }}">
+      <img src="{{ app.shot_2 }}" alt="{{ app.shot_2_alt }}">
+    </div>
+    <p class="price"><s>{{ app.list_price }}</s> {{ app.price }}</p>
+    <button type="button" class="primary">{{ t.install }}</button>
+    <!-- Seeded issue: icon-only link with no accessible name (2.4.4). -->
+    <a href="/wishlist/add/{{ app.id }}" class="icon-link">
+      <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 21l-8-8a5 5 0 0 1 8-6 5 5 0 0 1 8 6z"/></svg>
+    </a>
+    <!-- Seeded issue: icon-only button with no accessible name (4.1.2). -->
+    <button type="button" class="share"><svg width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="4"/></svg></button>
+    <h2>{{ t.about }}</h2>
+    <p>{{ app.description }}</p>
+    <p class="rating">{{ t.rating }}: {{ app.rating }}</p>
+  </main>
+</body>
+</html>

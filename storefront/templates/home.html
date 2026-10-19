@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ t.store_name }}</title>
+</head>
+<body>
+  <header>
+    <a href="/"><img src="/img/logo.svg" alt="{{ t.store_name }} home"></a>
+    <nav aria-label="{{ t.nav_label }}">
+      <a href="/apps">{{ t.nav_apps }}</a>
+      <a href="/games">{{ t.nav_games }}</a>
+      <a href="/account">{{ t.nav_account }}</a>
+    </nav>
+  </header>
+  <main>
+    <h1>{{ t.featured_heading }}</h1>
+    <section class="hero">
+      <!-- Seeded issue: hero artwork has no alt attribute (1.1.1). -->
+      <img src="{{ hero.image }}" class="hero-art">
+      <h2>{{ hero.title }}</h2>
+      <p>{{ hero.tagline }}</p>
+      <!-- Seeded issue: generic link text (2.4.4, advisory). -->
+      <a href="/apps/{{ hero.id }}">Read more</a>
+    </section>
+    <section>
+      <h2>{{ t.new_this_week }}</h2>
+      <ul class="tiles">
+        <li><a href="/apps/aurora-cinema"><img src="/img/aurora.png" alt="">Aurora Cinema</a></li>
+        <li><a href="/apps/tidepool-kids"><img src="/img/tidepool.png" alt="">Tidepool Kids</a></li>
+        <li><a href="/apps/orbit-weather"><img src="/img/orbit.png" alt="">Orbit Weather</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <a href="{{ legal.terms }}">{{ t.terms }}</a>
+    <a href="{{ legal.privacy }}">{{ t.privacy }}</a>
+  </footer>
+</body>
+</html>

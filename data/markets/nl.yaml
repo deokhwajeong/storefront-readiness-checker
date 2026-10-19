@@ -1,0 +1,31 @@
+# Market rule pack: Netherlands.
+# Illustrative rules for a fictional storefront. Not legal advice and not a
+# statement of any jurisdiction's actual requirements.
+market: NL
+name: Netherlands
+locales:
+  required: [nl-NL]
+  fallback: {}
+translation:
+  required_fields: [title, description, screenshot_alt]
+  min_completeness: 0.98
+string_limits:
+  title: {max: 30, unit: chars, severity: blocker}
+  description: {max: 320, unit: chars, severity: warning}
+age_rating:
+  scheme: numeric-5
+pricing:
+  currency: "EUR"
+  symbol: "€"
+  position: "prefix"
+  space: true
+  decimal: ","
+  group: "."
+  decimals: 2
+legal:
+  required_links: [terms, privacy]
+content:
+  loot_boxes: {action: block}
+accessibility:
+  required: true
+  standard: "WCAG 2.0 Level AA"

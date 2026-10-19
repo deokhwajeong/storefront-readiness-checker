@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- Seeded issue: no lang attribute on <html> (3.1.1). -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ t.search }} | {{ t.store_name }}</title>
+</head>
+<body>
+  <main>
+    <h1>{{ t.search }}</h1>
+    <form role="search" action="/search">
+      <!-- Seeded issue: placeholder only, no label (1.3.1). -->
+      <input type="search" name="q" placeholder="{{ t.search_placeholder }}">
+      <button type="submit">{{ t.search }}</button>
+    </form>
+    <h2>{{ t.results }}</h2>
+    <ol class="results">
+      <li><a href="/apps/meridian-news">Meridian News</a></li>
+      <li><a href="/apps/lantern-karaoke">Lantern Karaoke</a></li>
+    </ol>
+    <p><a href="/help/search">click here</a> {{ t.search_help }}</p>
+  </main>
+</body>
+</html>
