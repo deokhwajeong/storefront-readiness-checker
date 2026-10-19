@@ -210,11 +210,11 @@ def lang(locale: str) -> str:
 
 
 def listing(title: str, category: str, locale: str) -> dict:
-    lg = lang(locale)
-    alts = SCREEN_ALT[lg]
+    code = lang(locale)
+    alts = SCREEN_ALT[code]
     return {
         "title": title,
-        "description": DESCRIPTIONS[category][lg],
+        "description": DESCRIPTIONS[category][code],
         "screenshots": [
             {"file": "home.png", "alt": alts[0].format(t=title)},
             {"file": "detail.png", "alt": alts[1].format(t=title)},
